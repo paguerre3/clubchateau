@@ -274,6 +274,47 @@ select {
     50% { transform: scale(1.05); }
 }
 
+/* Mobile Loading Screen Fixes */
+@media (max-width: 768px) {
+    .loader {
+        padding: 0 var(--spacing-md);
+        max-width: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .loading-text {
+        font-size: 1.6rem;
+        text-align: center;
+        line-height: 1.3;
+        margin-bottom: var(--spacing-lg);
+        padding: 0 var(--spacing-sm);
+        max-width: 90%;
+    }
+    
+    .progress-bar {
+        width: 85%;
+        max-width: 25rem;
+        margin: 0 auto;
+    }
+    
+    .logo-container {
+        margin-bottom: var(--spacing-lg);
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .loading-logo {
+        width: 6rem;
+        height: 6rem;
+        margin: 0 auto;
+    }
+}
+
 @keyframes loading {
     0% { width: 0%; }
     100% { width: 100%; }
@@ -1125,6 +1166,17 @@ select {
     .video-container {
         grid-template-columns: 1fr;
         gap: var(--spacing-xl);
+        padding: var(--spacing-md);
+    }
+    
+    .club-video {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border-radius: var(--radius-md);
+        /* Ensure proper mobile video display */
+        object-fit: contain;
+        background: #000;
     }
     
     .main-video {
@@ -1149,6 +1201,16 @@ select {
         flex: 1 1 calc(50% - 1rem);
         flex-direction: column;
         text-align: center;
+    }
+
+    /* Mobile video controls enhancement */
+    .club-video::-webkit-media-controls {
+        background: rgba(0, 0, 0, 0.8);
+        border-radius: var(--radius-sm);
+    }
+    
+    .club-video::-webkit-media-controls-panel {
+        background: rgba(0, 0, 0, 0.8);
     }
 }
 

@@ -583,16 +583,43 @@ class VideoManager {
             this.handleVideoError();
         });
 
+        // Mobile-specific video handling
+        if (this.isMobileDevice()) {
+            this.setupMobileVideoFeatures();
+        }
+
         // Optional: Add click to play/pause
         this.video.addEventListener('click', () => {
             if (this.video.paused) {
                 this.video.play().catch(e => {
                     console.log('Video play failed:', e);
+                    this.handleVideoError();
                 });
             } else {
                 this.video.pause();
             }
         });
+    }
+
+    isMobileDevice() {
+        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
+
+    setupMobileVideoFeatures() {
+        // Set mobile-friendly attributes
+        this.video.setAttribute('playsinline', 'true');
+        this.video.setAttribute('webkit-playsinline', 'true');
+        this.video.setAttribute('controls', 'true');
+        
+        // Handle mobile video play issues
+        this.video.addEventListener('loadeddata', () => {
+            console.log('Video data loaded for mobile');
+        });
+
+        // Fallback for older mobile browsers
+        if (this.video.readyState < 3) {
+            this.video.load();
+        }
     }
 
     handleVideoError() {
