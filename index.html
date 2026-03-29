@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Club Social y Deportivo Chateau Carreras - Asociación Civil. Un espacio de encuentro, deporte, familia y compañerismo en Córdoba">
+    <meta name="keywords" content="club social, chateau carreras, córdoba, familia, eventos, deportes, recreación, hornero 644">
+    <meta name="author" content="Club Social y Deportivo Chateau Carreras">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://clubchateau.com.ar">
+    <meta property="og:title" content="Club Social y Deportivo Chateau Carreras">
+    <meta property="og:description" content="Un espacio de encuentro, deporte, familia y compañerismo en Córdoba">
+    <meta property="og:image" content="assets/images/logo-circular.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://clubchateau.com.ar">
+    <meta property="twitter:title" content="Club Social y Deportivo Chateau Carreras">
+    <meta property="twitter:description" content="Un espacio de encuentro, deporte, familia y compañerismo en Córdoba">
+    <meta property="twitter:image" content="assets/images/logo-circular.png">
+    
+    <title>Club Social y Deportivo Chateau Carreras - Inicio</title>
+    
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Modern fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/logo-circular.png">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader">
+            <div class="logo-container">
+                <img src="assets/images/logo-circular.png" alt="Club Social y Deportivo Chateau Carreras" class="loading-logo">
+            </div>
+            <div class="loading-text">Club Social y Deportivo Chateau Carreras</div>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="assets/images/logo-circular.png" alt="Logo Club" class="logo-img">
+                <span class="logo-text">Club Chateau</span>
+            </div>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#inicio" class="nav-link active">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#plan" class="nav-link">Plan</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#acerca" class="nav-link">Acerca</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#galeria" class="nav-link">Galería</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contacto" class="nav-link">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#eventos" class="nav-link">Eventos</a>
+                </li>
+            </ul>
+            
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section - Inicio -->
+    <section id="inicio" class="hero">
+        <div class="hero-background">
+            <div style="background-image: url('assets/images/plaza-eventos-mejorada.png')" class="hero-bg"></div>
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="container">
+                <div class="hero-content-box" data-aos="fade-up" data-aos-duration="1000">
+                    <h1 class="hero-title">Club Social y Deportivo Chateau Carreras</h1>
+                    <p class="hero-subtitle">Asociación Civil</p>
+                    <div class="hero-buttons" data-aos="fade-up" data-aos-delay="600">
+                        <a href="https://forms.gle/U46uxqKGFmbbkiUk6" target="_blank" class="btn btn-primary">
+                            Quiero ser socio
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plan Section - Video -->
+    <section id="plan" class="plan-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Nuestro Club</h2>
+                <p class="section-description">Conocé más sobre Club Social Chateau Carreras</p>
+            </div>
+            <div class="video-container" data-aos="zoom-in">
+                <video 
+                    id="clubVideo"
+                    controls 
+                    poster="assets/images/plaza-noche-mejorada.png"
+                    preload="metadata"
+                    width="100%"
+                    style="max-width: 800px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);"
+                    class="club-video">
+                    <source src="assets/videos/club-video.mp4" type="video/mp4">
+                    <p>Tu navegador no soporta el elemento de video. 
+                       <a href="assets/videos/club-video.mp4">Descargar el video</a>.
+                    </p>
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Acerca Section -->
+    <section id="acerca" class="acerca-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">El Corazón de Nuestro Barrio</h2>
+                <p class="section-description">Ubicados en uno de los sectores más vibrantes y tradicionales de la zona, somos mucho más que un club: somos el punto de encuentro de nuestra comunidad. Aquí se respira deporte, familia y compañerismo. Cada calle y cada vecino cuenta una historia de esfuerzo y pasión compartida, brindando un espacio moderno y seguro para el desarrollo social y deportivo de todas las generaciones.</p>
+            </div>
+            
+            <div class="acerca-images" data-aos="fade-up" data-aos-delay="300">
+                <div class="image-item">
+                    <img src="assets/images/plaza-chicos-mejorada.png" alt="Plaza para niños">
+                </div>
+                <div class="image-item">
+                    <img src="assets/images/plaza-noche-mejorada.png" alt="Plaza de noche">
+                </div>
+                <div class="image-item">
+                    <img src="assets/images/arbol.png" alt="Plaza con árbol">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería Section -->
+    <section id="galeria" class="galeria-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Nuestro Barrio</h2>
+                <p class="section-description">El barrio Chateau Carreras, ubicado en la zona noroeste de la ciudad de Córdoba, se caracteriza visualmente por una mezcla de modernidad, espacios verdes y hitos arquitectónicos de gran escala.</p>
+            </div>
+            
+            <div class="galeria-grid" data-aos="fade-up" data-aos-delay="300">
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="assets/images/plaza-chateau.webp" alt="Plaza Chateau">
+                    <div class="galeria-overlay">
+                        <i class="fas fa-expand-alt"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="assets/images/imagen-plaza-mural.webp" alt="Plaza con mural">
+                    <div class="galeria-overlay">
+                        <i class="fas fa-expand-alt"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="assets/images/imagen-damian-emo.webp" alt="Evento">
+                    <div class="galeria-overlay">
+                        <i class="fas fa-expand-alt"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="assets/images/barrio-atardecer.webp" alt="Barrio al atardecer">
+                    <div class="galeria-overlay">
+                        <i class="fas fa-expand-alt"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="500">
+                    <img src="assets/images/plaza-arbol-original-(3582).webp" alt="Plaza árbol">
+                    <div class="galeria-overlay">
+                        <i class="fas fa-expand-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section id="contacto" class="contacto-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">¡Contáctanos!</h2>
+            </div>
+            
+            <div class="contacto-grid">
+                <div class="contacto-info" data-aos="fade-right">
+                    <h3>Ubicación</h3>
+                    <p class="ubicacion">Hornero 644, X5003 Córdoba, Argentina</p>
+                    
+                    <div class="contacto-details">
+                        <div class="contacto-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+54 3518184779</span>
+                        </div>
+                        <div class="contacto-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>+54 3518184779</span>
+                        </div>
+                    </div>
+                    
+                    <h3>Horarios</h3>
+                    <p>Abierto las 24hs</p>
+                    
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/clubchateau.com.ar" target="_blank" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/543518184779" target="_blank" class="social-link">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contacto-map" data-aos="fade-left">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.159473397558!2d-64.259192!3d-31.385629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDIzJzA4LjMiUyA2NMKwMTUnMzMuMSJX!5e0!3m2!1ses!2sar!4v1679400000000!5m2!1ses!2sar&q=Hornero+644,+X5003+Córdoba,+Argentina"
+                        width="100%" 
+                        height="400" 
+                        style="border:0; border-radius: 1rem;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Ubicación Club Social Chateau Carreras - Hornero 644">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Eventos Section -->
+    <section id="eventos" class="eventos-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Eventos</h2>
+            </div>
+            
+            <div class="eventos-grid">
+                <!-- Evento 1 -->
+                <div class="evento-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="evento-date">
+                        <span class="date-day">28</span>
+                        <span class="date-month">abril</span>
+                    </div>
+                    <div class="evento-image">
+                        <img src="assets/images/imagne-deportes-gobierno.webp" alt="Maratón">
+                    </div>
+                    <div class="evento-content">
+                        <div class="evento-category">Próximos Eventos - Deportivos</div>
+                        <h3 class="evento-title">Inicio de maratón</h3>
+                        <div class="evento-time">
+                            <i class="fas fa-clock"></i>
+                            <span>16 HS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Evento 2 -->
+                <div class="evento-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="evento-date">
+                        <span class="date-day">10</span>
+                        <span class="date-month">mayo</span>
+                    </div>
+                    <div class="evento-image">
+                        <img src="assets/images/plaza-evento-festivo-original.webp" alt="Evento folclórico">
+                    </div>
+                    <div class="evento-content">
+                        <div class="evento-category">Eventos Culturales - Música</div>
+                        <h3 class="evento-title">Evento folclórico</h3>
+                        <div class="evento-time">
+                            <i class="fas fa-clock"></i>
+                            <span>11 HS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Evento 3 -->
+                <div class="evento-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="evento-date">
+                        <span class="date-day">01</span>
+                        <span class="date-month">junio</span>
+                    </div>
+                    <div class="evento-image">
+                        <img src="assets/images/imagen-barrio.webp" alt="Reunión socios">
+                    </div>
+                    <div class="evento-content">
+                        <div class="evento-category">Eventos Comunitarios - Reuniones</div>
+                        <h3 class="evento-title">Reunión de socios del club</h3>
+                        <div class="evento-time">
+                            <i class="fas fa-clock"></i>
+                            <span>22 HS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="assets/images/logo-circular.png" alt="Club Social y Deportivo Chateau Carreras" style="width: 80px; height: 80px; object-fit: contain; background: white; border-radius: 50%; padding: 5px;">
+                        <h3>Club Social y Deportivo Chateau Carreras</h3>
+                    </div>
+                    <p>Asociación Civil - Un espacio de encuentro, deporte, familia y compañerismo en el corazón de Córdoba.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#plan">Plan</a></li>
+                        <li><a href="#acerca">Acerca</a></li>
+                        <li><a href="#galeria">Galería</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                        <li><a href="#eventos">Eventos</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> Hornero 644, X5003 Córdoba</p>
+                        <p><i class="fas fa-phone"></i> +54 351 818-4779</p>
+                        <p><i class="fas fa-envelope"></i> csydchateaucarreras@gmail.com</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Síguenos</h4>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/clubchateau.com.ar" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/543518184779" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Club Social y Deportivo Chateau Carreras. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- WhatsApp Float Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/543518184779" target="_blank" class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
