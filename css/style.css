@@ -552,28 +552,38 @@ select {
     .hamburger {
         display: flex !important;
         flex-direction: column !important;
-        background: rgba(255, 255, 255, 0.2) !important;
-        padding: 1rem !important;
-        border-radius: 8px !important;
-        border: 2px solid rgba(255, 255, 255, 0.5) !important;
+        background: rgba(255, 255, 255, 0.3) !important;
+        padding: 0.8rem !important;
+        border-radius: 6px !important;
+        border: 2px solid white !important;
         cursor: pointer !important;
         position: relative !important;
         z-index: 10001 !important;
-        width: 50px !important;
-        height: 50px !important;
+        width: 44px !important;
+        height: 44px !important;
         align-items: center !important;
         justify-content: center !important;
         opacity: 1 !important;
         visibility: visible !important;
+        /* Force immediate visibility */
+        animation: none !important;
+        transition: none !important;
+        transform: translateZ(0) !important;
+        will-change: auto !important;
     }
     
     .bar {
-        width: 25px !important;
-        height: 3px !important;
+        width: 20px !important;
+        height: 2px !important;
         background: white !important;
         margin: 2px 0 !important;
         display: block !important;
         opacity: 1 !important;
+        border-radius: 1px !important;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+        /* Force immediate visibility */
+        animation: none !important;
+        transition: none !important;
     }
     
     .nav-menu {
@@ -1271,10 +1281,11 @@ select {
     .club-video {
         width: 100% !important;
         max-width: 100% !important;
-        height: 300px !important;
+        height: auto !important;
+        aspect-ratio: 16/9 !important;
         border-radius: var(--radius-md);
         /* Chrome mobile video fixes */
-        object-fit: fill !important;
+        object-fit: cover !important;
         background: #000000 !important;
         display: block !important;
         opacity: 1 !important;
@@ -1284,6 +1295,9 @@ select {
         /* Force rendering */
         transform: translateZ(0) !important;
         -webkit-transform: translateZ(0) !important;
+        /* Mobile sizing */
+        max-height: 250px !important;
+        min-height: 200px !important;
     }
     
     .video-container {
@@ -1291,6 +1305,10 @@ select {
         border-radius: var(--radius-md) !important;
         overflow: hidden !important;
         position: relative !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        /* Mobile container sizing */
+        padding: 0 1rem !important;
     }
     
     .main-video {

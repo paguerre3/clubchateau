@@ -632,8 +632,11 @@ class VideoManager {
         // Force display properties for Chrome mobile
         this.video.style.display = 'block';
         this.video.style.width = '100%';
-        this.video.style.height = '300px';
-        this.video.style.objectFit = 'fill';
+        this.video.style.height = 'auto';
+        this.video.style.aspectRatio = '16/9';
+        this.video.style.maxHeight = '250px';
+        this.video.style.minHeight = '200px';
+        this.video.style.objectFit = 'cover';
         this.video.style.background = '#000000';
         this.video.style.opacity = '1';
         this.video.style.visibility = 'visible';
