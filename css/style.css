@@ -538,62 +538,57 @@ select {
 
 /* Mobile Navigation */
 @media (max-width: 768px) {
-    .navbar {
-        position: fixed !important;
-        z-index: 1000 !important;
-    }
-    
-    .nav-container {
-        display: flex !important;
-        justify-content: space-between !important;
-        align-items: center !important;
-    }
-    
     .hamburger {
         display: flex !important;
         flex-direction: column !important;
-        background: white !important;
-        padding: 10px !important;
-        border-radius: 5px !important;
-        border: 3px solid #084e76 !important;
+        background: #084e76 !important;
+        padding: 12px !important;
+        border-radius: 8px !important;
+        border: 3px solid #f1d116 !important;
         cursor: pointer !important;
         position: fixed !important;
-        top: 1rem !important;
-        right: 1rem !important;
-        z-index: 50000 !important;
+        top: 20px !important;
+        right: 20px !important;
+        z-index: 50 !important;
         width: 50px !important;
         height: 50px !important;
         align-items: center !important;
         justify-content: center !important;
         opacity: 1 !important;
         visibility: visible !important;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
+        transform: translateZ(0) !important;
     }
     
     .bar {
         width: 25px !important;
-        height: 3px !important;
-        background: #084e76 !important;
+        height: 4px !important;
+        background: #f1d116 !important;
         margin: 3px 0 !important;
         display: block !important;
         opacity: 1 !important;
         border-radius: 2px !important;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
     }
     
     .nav-menu {
-        position: fixed;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: var(--primary-blue-dark);
-        flex-direction: column;
-        padding: var(--spacing-lg);
-        transform: translateX(-100%);
-        transition: transform 0.3s ease;
+        position: fixed !important;
+        top: 0 !important;
+        right: 0 !important;
+        width: 70% !important;
+        height: 100vh !important;
+        background: var(--primary-blue-dark) !important;
+        flex-direction: column !important;
+        padding: 4rem 2rem 2rem 2rem !important;
+        transform: translateX(100%) !important;
+        transition: transform 0.3s ease-out !important;
+        z-index: 40 !important;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3) !important;
+        display: flex !important;
     }
     
     .nav-menu.active {
-        transform: translateX(0);
+        transform: translateX(0) !important;
     }
     
     .hamburger.active .bar:nth-child(1) {
