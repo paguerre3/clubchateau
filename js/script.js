@@ -629,23 +629,18 @@ class VideoManager {
     forceChromeVideoDisplay() {
         if (!this.video) return;
         
-        // Force bright display for Chrome mobile
-        this.video.style.display = 'block';
-        this.video.style.width = '100%';
-        this.video.style.height = '250px';
-        this.video.style.objectFit = 'cover';
-        this.video.style.background = '#ffffff';
-        this.video.style.opacity = '1';
-        this.video.style.visibility = 'visible';
-        this.video.style.filter = 'brightness(1.1) contrast(1.1)';
+        // Remove any dark filters
+        this.video.style.filter = 'none';
+        this.video.style.background = 'transparent';
         
-        // Force repaint
-        this.video.style.transform = 'translateZ(0)';
-        this.video.style.willChange = 'transform';
+        // Ensure poster shows properly
+        this.video.load();
         
-        // Try to load if not loaded
-        if (this.video.readyState === 0) {
-            this.video.load();
+        // Mobile responsive sizing
+        if (window.innerWidth <= 768) {
+            this.video.style.maxWidth = '350px';
+            this.video.style.height = 'auto';
+            this.video.style.aspectRatio = '16/9';
         }
     }
 
