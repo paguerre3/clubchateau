@@ -1266,21 +1266,14 @@ select {
     }
     
     .club-video {
-        width: 100% !important;
-        height: 250px !important;
-        border-radius: var(--radius-md) !important;
-        /* Chrome mobile video brightness fix */
-        object-fit: cover !important;
-        background: #ffffff !important;
-        display: block !important;
-        opacity: 1 !important;
-        visibility: visible !important;
-        /* Force bright rendering */
-        filter: brightness(1.1) contrast(1.1) !important;
-        transform: translateZ(0) !important;
-        -webkit-transform: translateZ(0) !important;
-        /* Force hardware acceleration */
-        will-change: transform !important;
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        aspect-ratio: 16/9;
+        border-radius: var(--radius-md);
+        object-fit: cover;
+        display: block;
+        margin: 0 auto;
     }
     
     .video-container {
