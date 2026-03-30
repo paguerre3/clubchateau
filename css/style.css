@@ -331,7 +331,7 @@ select {
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
-        z-index: 9999 !important;
+        z-index: 99999 !important;
         overflow: hidden !important;
     }
     
@@ -540,7 +540,7 @@ select {
 @media (max-width: 768px) {
     .navbar {
         position: fixed !important;
-        z-index: 10000 !important;
+        z-index: 1000 !important;
     }
     
     .nav-container {
@@ -558,7 +558,7 @@ select {
         border: 2px solid white !important;
         cursor: pointer !important;
         position: relative !important;
-        z-index: 10001 !important;
+        z-index: 1001 !important;
         width: 44px !important;
         height: 44px !important;
         align-items: center !important;
@@ -1280,35 +1280,22 @@ select {
     
     .club-video {
         width: 100% !important;
-        max-width: 100% !important;
-        height: auto !important;
-        aspect-ratio: 16/9 !important;
-        border-radius: var(--radius-md);
+        height: 250px !important;
+        border-radius: var(--radius-md) !important;
         /* Chrome mobile video fixes */
         object-fit: cover !important;
         background: #000000 !important;
         display: block !important;
         opacity: 1 !important;
         visibility: visible !important;
-        position: relative !important;
-        z-index: 1 !important;
         /* Force rendering */
         transform: translateZ(0) !important;
         -webkit-transform: translateZ(0) !important;
-        /* Mobile sizing */
-        max-height: 250px !important;
-        min-height: 200px !important;
     }
     
     .video-container {
-        background: #000000 !important;
-        border-radius: var(--radius-md) !important;
-        overflow: hidden !important;
-        position: relative !important;
-        max-width: 100% !important;
-        margin: 0 auto !important;
-        /* Mobile container sizing */
         padding: 0 1rem !important;
+        margin: 0 auto !important;
     }
     
     .main-video {
