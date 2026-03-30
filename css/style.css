@@ -1111,10 +1111,13 @@ select {
 
 .club-video {
     width: 100%;
-    max-width: 800px;
+    max-width: 350px;
     height: auto;
+    aspect-ratio: 16/9;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-xl);
+    display: block;
+    margin: 0 auto;
 }
 
 .video-player {
