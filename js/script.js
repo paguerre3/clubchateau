@@ -629,17 +629,19 @@ class VideoManager {
     forceChromeVideoDisplay() {
         if (!this.video) return;
         
-        // Force display properties for Chrome mobile
+        // Force bright display for Chrome mobile
         this.video.style.display = 'block';
         this.video.style.width = '100%';
         this.video.style.height = '250px';
         this.video.style.objectFit = 'cover';
-        this.video.style.background = '#000000';
+        this.video.style.background = '#ffffff';
         this.video.style.opacity = '1';
         this.video.style.visibility = 'visible';
+        this.video.style.filter = 'brightness(1.1) contrast(1.1)';
         
         // Force repaint
         this.video.style.transform = 'translateZ(0)';
+        this.video.style.willChange = 'transform';
         
         // Try to load if not loaded
         if (this.video.readyState === 0) {
