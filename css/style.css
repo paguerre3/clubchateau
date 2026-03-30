@@ -539,58 +539,44 @@ select {
 /* Mobile Navigation */
 @media (max-width: 768px) {
     .hamburger {
-        display: flex !important;
-        flex-direction: column !important;
-        background: #084e76 !important;
-        padding: 12px !important;
-        border-radius: 8px !important;
-        border: 3px solid #f1d116 !important;
-        cursor: pointer !important;
-        position: fixed !important;
-        top: 1rem !important;
-        right: 1rem !important;
-        z-index: 9999 !important;
-        width: 50px !important;
-        height: 50px !important;
-        align-items: center !important;
-        justify-content: center !important;
-        opacity: 1 !important;
-        visibility: visible !important;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8) !important;
-        transform: translateZ(0) !important;
-        will-change: auto !important;
+        display: flex;
+        flex-direction: column;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        z-index: 100;
+        padding: 8px;
     }
     
     .bar {
-        width: 25px !important;
-        height: 4px !important;
-        background: #ffffff !important;
-        margin: 3px 0 !important;
-        display: block !important;
-        opacity: 1 !important;
-        border-radius: 2px !important;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6) !important;
-        border: 1px solid #000000 !important;
+        width: 25px;
+        height: 3px;
+        background: #333;
+        margin: 3px 0;
+        display: block;
+        transition: 0.3s;
     }
     
     .nav-menu {
-        position: fixed !important;
-        top: 0 !important;
-        right: 0 !important;
-        width: 70% !important;
-        height: 100vh !important;
-        background: var(--primary-blue-dark) !important;
-        flex-direction: column !important;
-        padding: 4rem 2rem 2rem 2rem !important;
-        transform: translateX(100%) !important;
-        transition: transform 0.3s ease-out !important;
-        z-index: 40 !important;
-        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3) !important;
-        display: flex !important;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 70%;
+        height: 100vh;
+        background: var(--primary-blue-dark);
+        flex-direction: column;
+        padding: 4rem 2rem 2rem 2rem;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        z-index: 50;
+        display: flex;
     }
     
     .nav-menu.active {
-        transform: translateX(0) !important;
+        transform: translateX(0);
     }
     
     .hamburger.active .bar:nth-child(1) {
