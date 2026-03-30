@@ -586,6 +586,10 @@ class VideoManager {
         // Mobile-specific video handling
         if (this.isMobileDevice()) {
             this.setupMobileVideoFeatures();
+            // Chrome mobile specific fixes
+            setTimeout(() => {
+                this.forceChromeVideoDisplay();
+            }, 1000);
         }
 
         // Optional: Add click to play/pause
@@ -622,9 +626,30 @@ class VideoManager {
         }
     }
 
+    forceChromeVideoDisplay() {
+        if (!this.video) return;
+        
+        // Force display properties for Chrome mobile
+        this.video.style.display = 'block';
+        this.video.style.width = '100%';
+        this.video.style.height = '300px';
+        this.video.style.objectFit = 'fill';
+        this.video.style.background = '#000000';
+        this.video.style.opacity = '1';
+        this.video.style.visibility = 'visible';
+        
+        // Force repaint
+        this.video.style.transform = 'translateZ(0)';
+        
+        // Try to load if not loaded
+        if (this.video.readyState === 0) {
+            this.video.load();
+        }
+    }
+
     handleVideoError() {
         console.log('Error loading video, trying alternative approach...');
-        // Fallback handling if needed
+        this.forceChromeVideoDisplay();
     }
 }
 

@@ -320,7 +320,7 @@ select {
     100% { width: 100%; }
 }
 
-/* Simple Mobile Fixes */
+/* Mobile Loading Fix */
 @media (max-width: 768px) {
     #loading-screen {
         position: fixed !important;
@@ -332,22 +332,56 @@ select {
         align-items: center !important;
         justify-content: center !important;
         z-index: 9999 !important;
+        overflow: hidden !important;
     }
     
     .loader {
         text-align: center !important;
         width: 90% !important;
         max-width: 400px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    .logo-container {
+        margin-bottom: 2rem !important;
+        display: block !important;
+        width: 100% !important;
+    }
+    
+    .loading-logo {
+        width: 80px !important;
+        height: 80px !important;
+        margin: 0 auto !important;
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
     }
     
     .loading-text {
         font-size: 1.4rem !important;
         padding: 0 1rem !important;
+        margin-bottom: 2rem !important;
+        color: white !important;
+        display: block !important;
+        opacity: 1 !important;
     }
     
     .progress-bar {
         width: 80% !important;
         margin: 0 auto !important;
+        display: block !important;
+        opacity: 1 !important;
+        background: rgba(255, 255, 255, 0.2) !important;
+        height: 4px !important;
+    }
+    
+    .progress-fill {
+        display: block !important;
+        opacity: 1 !important;
+        background: var(--primary-yellow) !important;
     }
 }
 
@@ -504,12 +538,42 @@ select {
 
 /* Mobile Navigation */
 @media (max-width: 768px) {
+    .navbar {
+        position: fixed !important;
+        z-index: 10000 !important;
+    }
+    
+    .nav-container {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+    }
+    
     .hamburger {
         display: flex !important;
-        background: rgba(255, 255, 255, 0.1);
-        padding: 0.8rem;
-        border-radius: 5px;
-        border: 1px solid rgba(255, 255, 255, 0.3);
+        flex-direction: column !important;
+        background: rgba(255, 255, 255, 0.2) !important;
+        padding: 1rem !important;
+        border-radius: 8px !important;
+        border: 2px solid rgba(255, 255, 255, 0.5) !important;
+        cursor: pointer !important;
+        position: relative !important;
+        z-index: 10001 !important;
+        width: 50px !important;
+        height: 50px !important;
+        align-items: center !important;
+        justify-content: center !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+    
+    .bar {
+        width: 25px !important;
+        height: 3px !important;
+        background: white !important;
+        margin: 2px 0 !important;
+        display: block !important;
+        opacity: 1 !important;
     }
     
     .nav-menu {
@@ -1207,13 +1271,26 @@ select {
     .club-video {
         width: 100% !important;
         max-width: 100% !important;
-        height: auto !important;
+        height: 300px !important;
         border-radius: var(--radius-md);
-        /* Mobile video fixes */
-        object-fit: contain !important;
+        /* Chrome mobile video fixes */
+        object-fit: fill !important;
         background: #000000 !important;
         display: block !important;
-        min-height: 200px !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        position: relative !important;
+        z-index: 1 !important;
+        /* Force rendering */
+        transform: translateZ(0) !important;
+        -webkit-transform: translateZ(0) !important;
+    }
+    
+    .video-container {
+        background: #000000 !important;
+        border-radius: var(--radius-md) !important;
+        overflow: hidden !important;
+        position: relative !important;
     }
     
     .main-video {
